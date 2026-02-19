@@ -1,0 +1,270 @@
+<mxfile host="65bd71144e">
+    <diagram id="infra-diagram" name="Infrastructure Diagram">
+        <mxGraphModel dx="1278" dy="929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1300" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="cloud_boundary" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#4472C4;strokeWidth=3;dashed=1;dashPattern=12 6;arcSize=5;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="50" width="1720" height="1180" as="geometry"/>
+                </mxCell>
+                <mxCell id="vpc" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82b366;strokeWidth=2;arcSize=4;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="85" width="1690" height="1130" as="geometry"/>
+                </mxCell>
+                <mxCell id="title" value="Диаграмма автоматизации развёртывания - «Будущее 2.0» (Yandex Cloud + Terraform)" style="text;html=1;fontSize=18;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="10" width="1200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cloud_label" value="Yandex Cloud" style="text;html=1;fontSize=14;fontStyle=3;align=left;verticalAlign=top;fillColor=none;strokeColor=none;fontColor=#4472C4;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="55" width="150" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="vpc_label" value="VPC: future20-network (Terraform)" style="text;html=1;fontSize=12;fontStyle=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;fontColor=#2D7600;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="90" width="280" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_clinic" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;opacity=40;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="120" width="350" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_clinic_label" value="Подсеть: clinic (10.10.1.0/24) - Terraform" style="text;html=1;fontSize=10;fontStyle=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="125" width="300" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_db_clinic" value="VM: db-clinic&#xa;4 vCPU / 16 GB&#xa;SSD 200 GB&#xa;PostgreSQL" style="shape=mxgraph.cisco.servers.standard_server;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;fontStyle=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="175" width="120" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_db_clinic_tag" value="Terraform" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="265" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="clinic_app" value="Сервисы клиники&#xa;(TypeScript, Python)&#xa;&#xa;Ansible provisioning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="265" y="175" width="140" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="clinic_app_tag" value="Вручную" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="295" y="265" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_fintech" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;opacity=40;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="420" width="350" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_fintech_label" value="Подсеть: fintech (10.10.2.0/24) - Terraform" style="text;html=1;fontSize=10;fontStyle=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="425" width="300" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_db_fintech" value="VM: db-fintech&#xa;4 vCPU / 16 GB&#xa;SSD 200 GB&#xa;PostgreSQL" style="shape=mxgraph.cisco.servers.standard_server;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="475" width="120" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_db_fintech_tag" value="Terraform" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="565" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="fintech_app" value="Финтех-сервисы&#xa;(Golang, Java)&#xa;&#xa;Ansible provisioning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="265" y="475" width="140" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="fintech_app_tag" value="Вручную" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="295" y="565" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_ai" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;opacity=40;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="720" width="350" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_ai_label" value="Подсеть: ai (10.10.3.0/24) - Terraform" style="text;html=1;fontSize=10;fontStyle=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="725" width="300" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_ai" value="VM: ai-worker&#xa;8 vCPU / 32 GB&#xa;GPU (V100)&#xa;SSD 200 GB" style="shape=mxgraph.cisco.servers.standard_server;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="775" width="120" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_ai_tag" value="Terraform" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="865" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="ai_note" value="Прерываемая VM&lt;br&gt;(экономия на GPU)" style="text;html=1;fontSize=8;fontStyle=2;align=center;fillColor=none;strokeColor=none;fontColor=#AE4132;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="885" width="130" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="ai_app" value="ИИ-сервисы (Python)&#xa;MLflow, PyTorch&#xa;&#xa;Ansible provisioning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="265" y="775" width="140" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="ai_app_tag" value="Вручную" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="295" y="865" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_hq" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;opacity=40;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="1020" width="350" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_hq_label" value="Подсеть: hq (10.10.4.0/24) - Terraform" style="text;html=1;fontSize=10;fontStyle=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="1025" width="280" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_db_hq" value="VM: db-hq&#xa;2 vCPU / 8 GB&#xa;SSD 100 GB&#xa;PostgreSQL" style="shape=mxgraph.cisco.servers.standard_server;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="1065" width="120" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_db_hq_tag" value="Terraform" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="195" y="1155" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_platform" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1;opacity=30;arcSize=4;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="120" width="800" height="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_platform_label" value="Подсеть: platform (10.10.5.0/24, zone-a) - Terraform" style="text;html=1;fontSize=10;fontStyle=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="125" width="350" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_kafka1" value="VM: kafka-1&#xa;4 vCPU / 8 GB&#xa;SSD 100 GB&#xa;Apache Kafka" style="shape=mxgraph.cisco.servers.standard_server;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="175" width="120" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_kafka1_tag" value="Terraform" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="265" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_ch" value="VM: clickhouse&#xa;8 vCPU / 32 GB&#xa;SSD 500 GB&#xa;ClickHouse (OLAP)" style="shape=mxgraph.cisco.servers.standard_server;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="175" width="130" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_ch_tag" value="Terraform" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="685" y="265" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_keycloak" value="VM: keycloak&#xa;2 vCPU / 4 GB&#xa;HDD 20 GB&#xa;Keycloak (IAM)" style="shape=mxgraph.cisco.servers.standard_server;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="830" y="175" width="120" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_keycloak_tag" value="Terraform" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="265" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_portal" value="VM: portal&#xa;4 vCPU / 8 GB&#xa;SSD 50 GB&#xa;Apache Superset" style="shape=mxgraph.cisco.servers.standard_server;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="990" y="175" width="120" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_apigw" value="VM: api-gateway&#xa;2 vCPU / 4 GB&#xa;HDD 20 GB&#xa;Kong" style="shape=mxgraph.cisco.servers.standard_server;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1150" y="175" width="100" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_group" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=1;opacity=40;" parent="1" vertex="1">
+                    <mxGeometry x="790" y="320" width="460" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_label" value="Object Storage (S3) - Terraform" style="text;html=1;fontSize=10;fontStyle=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="330" width="160" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_med" value="future20-medical-images&#xa;(мед. снимки для ИИ)&#xa;private / versioned / encrypted" style="shape=mxgraph.aws4.bucket;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="350" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_ml" value="future20-ml-models&#xa;(ML-модели, артефакты)&#xa;private / versioned / encrypted" style="shape=mxgraph.aws4.bucket;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="350" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_backup" value="future20-backups&#xa;(резервные копии БД)&#xa;private / versioned / encrypted" style="shape=mxgraph.aws4.bucket;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="350" width="110" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_platform_b" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1;opacity=30;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="470" width="250" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="subnet_platform_b_label" value="Подсеть: platform-b (10.10.6.0/24, zone-b) - Terraform" style="text;html=1;fontSize=10;fontStyle=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="475" width="350" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_kafka2" value="VM: kafka-2&#xa;4 vCPU / 8 GB&#xa;SSD 100 GB&#xa;Apache Kafka (реплика)" style="shape=mxgraph.cisco.servers.standard_server;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="520" width="140" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="vm_kafka2_tag" value="Terraform" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="614" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="nat_gw" value="Terraform" style="shape=mxgraph.cisco.routers.wireless_router;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1350" y="120" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="nat_tag" value="🟢 Terraform" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1365" y="205" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="static_ip" value="Статический IP&#xa;(API Gateway)&#xa;&#xa;Terraform" style="shape=mxgraph.cisco.misc.cloud;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1500" y="120" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="sg_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=1;opacity=40;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="470" width="460" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="sg_box_label" value="Security Groups (Terraform)" style="text;html=1;fontSize=10;fontStyle=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="810" y="475" width="250" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="sg_base_item" value="sg-base&#xa;SSH (порт 22)&#xa;из 10.10.0.0/16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="505" width="130" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="sg_kafka_item" value="sg-kafka&#xa;порт 9092, 9093&#xa;из platform-подсетей" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="970" y="505" width="140" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="sg_pg_item" value="sg-postgres&#xa;порт 5432&#xa;из 10.10.0.0/16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="575" width="130" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="sg_ch_item" value="sg-clickhouse&#xa;порт 8123, 9000&#xa;из 10.10.0.0/16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="970" y="575" width="140" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="sg_web_item" value="sg-web&#xa;порт 80, 443&#xa;из 0.0.0.0/0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1130" y="505" width="120" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="manual_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;dashed=1;dashPattern=8 4;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="720" width="1080" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="manual_label" value="Компоненты, разворачиваемые ВРУЧНУЮ (Ansible / скрипты / портал)" style="text;html=1;fontSize=11;fontStyle=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;fontColor=#B85450;" parent="1" vertex="1">
+                    <mxGeometry x="485" y="725" width="500" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="manual_dns" value="DNS-записи&#xa;&#xa;Корпоративный DNS&#xa;или Cloud DNS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="770" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="manual_ssl" value="SSL-сертификаты&#xa;&#xa;Let&#39;s Encrypt /&#xa;корпоративный CA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="770" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="manual_ansible" value="Ansible playbooks&#xa;&#xa;Установка ПО:&#xa;Kafka, PG, CH,&#xa;Keycloak, Superset" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="770" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="manual_monitoring" value="Мониторинг&#xa;&#xa;Prometheus + Grafana&#xa;SLA-дашборды" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="990" y="770" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="manual_datahub" value="DataHub&#xa;&#xa;Каталог данных,&#xa;lineage, метаданные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1150" y="770" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="manual_data_migration" value="Миграция данных&lt;br&gt;&lt;br&gt;Legacy DWH -&amp;gt; доменные БД&lt;br&gt;(Airflow / скрипты)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1310" y="770" width="150" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="manual_backup_policy" value="Политики бэкапов&#xa;&#xa;Расписание, ротация,&#xa;проверка восстановления" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="870" width="150" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="manual_cicd" value="CI/CD пайплайны&#xa;&#xa;GitLab CI / GitHub Actions&#xa;для деплоя сервисов" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="870" width="150" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="route_table" value="Route Table -&amp;gt; NAT GW&lt;br&gt;0.0.0.0/0 -&amp;gt; nat-gw&lt;br&gt;(Terraform)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1350" y="250" width="170" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_nat_inet" value="Интернет" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4472C4;strokeWidth=2;fontSize=9;fontColor=#4472C4;" parent="1" source="nat_gw" target="static_ip" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn_kafka_repl" value="Репликация&#xa;(порт 9093)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2D7600;strokeWidth=2;dashed=1;fontSize=8;fontColor=#2D7600;" parent="1" source="vm_kafka1" target="vm_kafka2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="610" y="380"/>
+                            <mxPoint x="610" y="380"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="1020" width="540" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend_title" value="Легенда" style="text;html=1;fontSize=13;fontStyle=1;align=left;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="1025" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg1" value="" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="1055" width="18" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg1_l" value="Управляется Terraform (VM, Network, Disk, S3, SG, NAT)" style="text;fontSize=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="1050" width="340" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg2" value="" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="1080" width="18" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg2_l" value="Разворачивается вручную (Ansible, DNS, SSL, мониторинг)" style="text;fontSize=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="1075" width="340" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg3" value="" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=40;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="1105" width="18" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg3_l" value="Доменная подсеть (изолированный сегмент)" style="text;fontSize=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="1100" width="315" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg4" value="" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;opacity=30;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="1130" width="18" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg4_l" value="Платформенная подсеть (Kafka, Portal, Keycloak, API GW)" style="text;fontSize=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="1125" width="340" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg5" value="" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="1155" width="18" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg5_l" value="Security Group (сетевые правила)" style="text;fontSize=10;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="1150" width="325" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 9px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;NAT Gateway&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); font-family: Helvetica; font-size: 9px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 9px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;(интернет для VM&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); font-family: Helvetica; font-size: 9px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 9px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;без публичных IP)&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="1360" y="60" width="90" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Terraform" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="1010" y="267" width="80" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Terraform" style="text;html=1;fontSize=8;fontStyle=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="1160" y="267" width="80" height="16" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
