@@ -1,13 +1,13 @@
 <mxfile host="65bd71144e">
     <diagram id="tech-radar" name="Technology Radar">
-        <mxGraphModel dx="1278" dy="929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1400" math="0" shadow="0">
+        <mxGraphModel dx="1083" dy="883" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1400" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="ring_hold" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#CCCCCC;strokeWidth=2;opacity=40;" parent="1" vertex="1">
                     <mxGeometry x="100" y="100" width="1200" height="1200" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;opacity=50;dashed=1;" vertex="1" parent="1">
+                <mxCell id="2" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;opacity=50;dashed=1;" parent="1" vertex="1">
                     <mxGeometry x="230" y="230" width="940" height="950" as="geometry"/>
                 </mxCell>
                 <mxCell id="ring_trial" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6c8ebf;strokeWidth=2;opacity=50;" parent="1" vertex="1">
@@ -106,8 +106,8 @@
                 <mxCell id="p_datahub" value="DataHub" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;fontStyle=1;" parent="1" vertex="1">
                     <mxGeometry x="830" y="500" width="70" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="p_airflow" value="Apache Airflow" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" parent="1" vertex="1">
-                    <mxGeometry x="950" y="350" width="90" height="30" as="geometry"/>
+                <mxCell id="p_airflow" value="Apache Airflow" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="510" width="90" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="p_sqlserver" value="SQL Server&#xa;2008" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;fontStyle=1;fontColor=#AE4132;dashed=1;" parent="1" vertex="1">
                     <mxGeometry x="1050" y="280" width="80" height="40" as="geometry"/>
